@@ -1,5 +1,5 @@
 
-public class WhileLoop {
+public class ExWhileLoop {
 	public static void main(String[] args) {
 		int i=3;
 		int mult3=3;

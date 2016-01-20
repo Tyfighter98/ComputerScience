@@ -1,5 +1,5 @@
 
-public class Favorites {
+public class P1AFavorites {
 	public static void main (String[] args) {
 		System.out.println("My favortie food is pizza");
 		System.out.println("My favorite color is teal");
