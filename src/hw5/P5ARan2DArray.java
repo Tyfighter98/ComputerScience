@@ -17,8 +17,16 @@ public class P5ARan2DArray {
 			}
 			System.out.println("\n");
 		}
+		
+		System.out.println("Coordinates Containing 5:");
+		
 		for (int rowInt = 0; rowInt<grid.length; rowInt++) {
-			
+			for (int colInt = 0; colInt<grid[0].length; colInt++) {
+				if (grid[rowInt][colInt] == 5) {
+					System.out.println("(" + (rowInt+1) + ", " + (colInt+1) + ")");
+					
+				}
+			}
 		}
 	}
 }
