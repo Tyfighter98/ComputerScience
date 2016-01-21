@@ -1,6 +1,6 @@
 package elevensLab;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * The Deck class represents a shuffled deck of cards.
@@ -12,7 +12,7 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	private ArrayList<Card> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -31,7 +31,10 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		
+		for (int i = 0; i<ranks.length && i<suits.length && i<values.length; i++) {
+			this.cards.add(new Card(ranks[i], suits[i], values[i]));
+		}
 	}
 
 
@@ -40,8 +43,13 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return false;
+		
+		if (size() == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
@@ -49,8 +57,8 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return 0;
+		
+		return (this.cards.size());
 	}
 
 	/**
@@ -58,7 +66,12 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		
+		if (size() != 0) {
+			for (int i = 0; i<size(); i++) {
+				this.cards.remove(i);
+			}
+		}
 	}
 
 	/**
