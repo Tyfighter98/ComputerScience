@@ -70,6 +70,7 @@ public class Deck {
 		if (size() != 0) {
 			for (int i = 0; i<size(); i++) {
 				this.cards.remove(i);
+				cards.add(0);
 			}
 		}
 	}
@@ -80,8 +81,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return null;
+		if (size() != 0) {
+			return this.cards(0);
+		}
+		else {
+			System.out.println("All Cards have been dealt");
+		}
 	}
 
 	/**
