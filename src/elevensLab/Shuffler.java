@@ -1,20 +1,20 @@
 package elevensLab;
+
 /**
  * This class provides a convenient way to test shuffling methods.
  */
 public class Shuffler {
-
 	/**
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
+	
 	private static final int SHUFFLE_COUNT = 1;
-
-
 	/**
 	 * Tests shuffling methods.
 	 * @param args is not used.
 	 */
+	
 	public static void main(String[] args) {
 		System.out.println("Results of " + SHUFFLE_COUNT +
 								 " consecutive perfect shuffles:");
@@ -43,16 +43,32 @@ public class Shuffler {
 		}
 		System.out.println();
 	}
-
-
 	/**
 	 * Apply a "perfect shuffle" to the argument.
 	 * The perfect shuffle algorithm splits the deck in half, then interleaves
 	 * the cards in one half with the cards in the other.
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
+	
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] cards = new int[52];
+		int[] shuffled = new int[52];
+		
+		// Move first half of the deck to even slots in shuffled[]
+		int cntE = 0;
+		for (int iEven = 0; iEven<(shuffled.length)/2; iEven++) {
+			shuffled[iEven] = cards[cntE];
+			iEven++;
+			cntE++;
+		}
+		
+		// Move second half of the deck to odd slots in shuffled[]
+		int cntO = 26;
+		for (int iOdd = 1; iOdd<(shuffled.length)/2; iOdd++) {
+			shuffled[iOdd] = cards[cntO];
+			iOdd++;
+			cntO++;
+		}	
 	}
 
 	/**
