@@ -6,7 +6,6 @@ package elevensLab;
  * <code>Card</code> represents a playing card.
  */
 public class Card {
-
 	/**
 	 * String value that holds the suit of the card
 	 */
@@ -21,7 +20,6 @@ public class Card {
 	 * int value that holds the point value.
 	 */
 	private int pointValue;
-
 
    /**
 	 * Creates a new <code>Card</code> instance.
@@ -38,7 +36,6 @@ public class Card {
 		this.suit = cardSuit;
 		this.pointValue = cardPointValue;
 	}
-
 
 	/**
 	 * Accesses this <code>Card's</code> suit.
@@ -75,8 +72,6 @@ public class Card {
 				&& rank.equals(otherCard.rank)
 				&& pointValue == (otherCard.pointValue);
 	}
-		
-
 
 	/**
 	 * Converts the rank, suit, and point value into a string in the format
@@ -88,6 +83,7 @@ public class Card {
 	 * @return a <code>String</code> containing the rank, suit,
 	 *         and point value of the card.
 	 */
+	
 	@Override
 	public String toString() {
 		String output = new String();

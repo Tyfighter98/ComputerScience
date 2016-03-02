@@ -23,7 +23,7 @@ public class P5ARan2DArray {
 		for (int rowInt = 0; rowInt<grid.length; rowInt++) {
 			for (int colInt = 0; colInt<grid[0].length; colInt++) {
 				if (grid[rowInt][colInt] == 5) {
-					System.out.println("(" + (rowInt+1) + ", " + (colInt+1) + ")");
+					System.out.println("(" + (colInt+1) + ", " + (rowInt+1) + ")");
 					
 				}
 			}
